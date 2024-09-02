@@ -1,0 +1,196 @@
+Assignment_01
+  
+1) What are the types of Applications?
+
+ Web Applications: Run in web browsers; built using frameworks like Django and Flask.
+
+Desktop GUI Applications: Run on desktops; built using libraries like Tkinter, PyQt, and Kivy.
+
+Console Applications: Command-line tools; built using libraries like argparse and Click.
+
+Data Science and Machine Learning Applications: For data analysis and machine learning; use libraries like Pandas, NumPy, and TensorFlow.
+
+Automation and Scripting: Scripts for automating tasks; use libraries like os and shutil.
+
+Game Development: Games and interactive applications; built using libraries like Pygame and Arcade.
+
+Network and Internet Applications: Work with network protocols; use libraries like socket and Requests.
+
+Embedded Systems: Applications for microcontrollers; built using MicroPython and CircuitPython.
+
+Web Scraping and Data Extraction: Extract data from websites; use libraries like BeautifulSoup and Scrapy.
+
+Audio and Video Applications: Process audio and video; use libraries like OpenCV and Pydub.
+
+Scientific and Numeric Applications: Used for scientific research and simulations; use libraries like SciPy and SymPy.
+
+These types cover a broad range of Python applications across different domains and platforms.
+
+
+2) What is programing?  
+
+Programming is the process of writing instructions, called code, that a computer can execute to perform specific tasks. It involves using programming languages, such as Python, Java, or C++, to create software applications, automate tasks, analyze data, and solve problems.
+
+
+3) What is Python? 
+
+Python is a high-level, versatile programming language known for its easy-to-read syntax and wide range of applications, including web development, data science, automation, and more.
+
+4) Write a Python program to check if a number is positive, negative or
+zero.
+
+How the Program Works:
+Input: The program prompts the user to input a number.
+Check: It then checks the number:
+If the number is greater than 0, it is positive.
+If the number is less than 0, it is negative.
+If the number is 0, it is zero.
+Output: The program prints whether the number is positive, negative, or zero.
+Error Handling: If the user inputs a non-numeric value, the program will catch the ValueError and prompt for a valid number.
+
+5)Write a Python program to get the Factorial number of given numbers. 
+
+How the Program Works:
+Input: The program prompts the user to input a non-negative integer.
+Factorial Calculation:
+The program checks if the number is negative. If so, it returns a message saying the factorial is not defined for negative numbers.
+If the number is zero, it returns 1 (since the factorial of 0 is 1).
+For positive numbers, it calculates the factorial using a loop.
+Output: The program prints the factorial of the given number.
+Error Handling: If the user inputs a non-integer value, the program catches the ValueError and asks for a valid non-negative integer.
+
+6)Write a Python program to get the Fibonacci series of given range. 
+
+How the Program Works:
+Input: The program prompts the user to input a non-negative integer to define the range up to which the Fibonacci series will be generated.
+Fibonacci Series Calculation:
+The program initializes two variables a and b with the first two numbers in the Fibonacci series: 0 and 1.
+It then uses a while loop to generate the Fibonacci series up to the given number n.
+Each generated Fibonacci number is added to the list fib_series.
+Output: The program prints the Fibonacci series up to the given range.
+Error Handling: If the user inputs a non-integer value or a negative number, the program catches the ValueError or checks for negativity and prompts for a valid non-negative integer.
+
+7)How memory is managed in Python? 
+
+In Python, memory management is handled through:
+
+Automatic Garbage Collection: Python automatically reclaims memory from objects that are no longer in use, primarily using a cyclic garbage collector to handle reference cycles.
+
+Reference Counting: Python tracks the number of references to each object. When an object's reference count drops to zero, its memory is deallocated.
+
+Memory Pools: Python uses memory pools for efficient management of small objects, reducing overhead and fragmentation.
+
+Object-Specific Allocators: Specialized allocators manage memory for different types of objects, optimizing performance.
+
+Overall, Python's memory management combines automatic and efficient mechanisms to handle memory allocation and deallocation.
+
+8)What is the purpose continuing statement in python? 
+
+The 'continue' statement in Python is used within a loop to skip the rest of the code for the current iteration and immediately proceed to the next iteration of the loop. It allows you to bypass certain conditions or cases without terminating the loop altogether.
+
+11) Write a Python program to test whether a passed letter is a vowel
+or not.
+
+In this program:
+
+We use input() to get the letter from the user and convert it to lowercase using .lower() for uniformity.
+We first check if the input is a single alphabetic character.
+Then, we check if the letter is in the string 'aeiou' to determine if it's a vowel.
+
+12) Write a Python program to sum of three given integers. However, if
+two values are equal sum will be zero. 
+
+How it works:
+The function sum_of_integers takes three arguments.
+It checks if any two of the three integers are equal.
+If any two values are equal, it returns 0.
+Otherwise, it returns the sum of the three integers.
+Feel free to test the program with different inputs to see how it behaves!
+
+13) Write a Python program that will return true if the two given
+integer values are equal or their sum or difference is 5. 
+
+How it works:
+The function check_values takes two arguments.
+It first checks if the two values are equal.
+If they are not equal, it then checks if the absolute value of their sum or difference is 5.
+It returns True if any of these conditions are met, otherwise it returns False.
+You can test this with various integer pairs to see how the program responds!
+
+16) Write a Python program to count the number of characters
+(character frequency) in a string
+
+Explanation:
+Function count_characters(s): This function creates a dictionary called frequency. It iterates over each character in the string, updating the count in the dictionary. If the character is already in the dictionary, its count is incremented; otherwise, it’s added with a count of 1.
+
+User Input: The program prompts the user to enter a string.
+
+Display Results: It prints out each character and its corresponding count.
+
+This method efficiently counts the frequency of each character in the string and displays the results
+
+
+17)What are negative indexes and why are they used?
+
+In Python, negative indexes provide a way to access elements from the end of a sequence, such as a list, tuple, or string, rather than from the beginning. They offer a convenient way to refer to elements relative to the end of the sequence without needing to calculate the length.
+
+How Negative Indexes Work:
+-1 refers to the last element of the sequence.
+-2 refers to the second-to-last element.
+And so on.
+
+Why Negative Indexes Are Used:
+Convenience: They simplify accessing elements from the end of a sequence without needing to compute the length of the sequence.
+Readability: They make code more readable by clearly indicating that you are accessing elements relative to the end of the sequence.
+Flexibility: They are useful when dealing with sequences of unknown or variable lengths, allowing you to easily access the last few elements without recalculating their positions.
+Negative indexing is particularly useful in scenarios where you need to access the last few elements of a sequence or when working with sequences where the length can vary.
+
+18)Write a Python program to count occurrences of a substring in a string. 
+
+Explanation:
+find method: This searches for the substring starting from the index start. If it finds the substring, it returns the starting index of the substring; otherwise, it returns -1.
+Loop: The loop continues until find returns -1, meaning no more occurrences are found.
+Counting: Each time the substring is found, the count is incremented, and start is updated to move past the last occurrence.
+You can replace the string and substring variables with your own values to test different cases.
+
+19) Write a Python program to count the occurrences of each word in a given sentence.
+
+Explanation:
+Lowercasing: Converts the entire sentence to lowercase to ensure that words are counted in a case-insensitive manner.
+Regex \b\w+\b: Finds all words, ignoring punctuation and spaces.
+Counter: Counts the occurrences of each word.
+Replace the sentence variable with your own text to analyze different sentences.
+
+20) Write a Python program to get a single string from two given strings,
+    separated by a space and swap the first two characters of each string. 
+
+Explanation:
+Swapping Characters:
+
+If str1 has at least two characters, replace its first two characters with the first two characters of str2.
+Similarly, if str2 has at least two characters, replace its first two characters with the first two characters of str1.
+Combining: Combine the modified str1 and str2 with a space in between.
+
+You can test this code with different strings by modifying the string1 and string2 variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
