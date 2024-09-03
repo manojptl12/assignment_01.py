@@ -1,0 +1,143 @@
+25)What is List? How will you reverse a list?
+
+A list in Python is a built-in data structure that is used to store an ordered collection of items, which can be of any data type (integers, strings, floats, objects, etc.). Lists are mutable, meaning that the items inside them can be changed after the list has been created. Lists are defined by placing the items inside square brackets '[]', separated by commas.
+
+# A list of integers
+numbers = [1, 2, 3, 4, 5]
+
+# A list of strings
+fruits = ["apple", "banana", "cherry"]
+
+# A mixed list
+mixed_list = [1, "hello", 3.14, True]
+
+How to Reverse a List in Python
+There are several ways to reverse a list in Python:
+
+Using the reverse() Method:
+
+The reverse() method reverses the elements of the list in place, meaning it modifies the original list and does not create a new one.
+Example:
+numbers = [1, 2, 3, 4, 5]
+numbers.reverse()
+print(numbers)  # Output: [5, 4, 3, 2, 1]
+Using List Slicing:
+
+You can reverse a list using slicing by specifying a step of -1.
+This creates a new list that is a reversed version of the original.
+Example:
+numbers = [1, 2, 3, 4, 5]
+reversed_numbers = numbers[::-1]
+print(reversed_numbers)  # Output: [5, 4, 3, 2, 1]
+Using the reversed() Function:
+
+The reversed() function returns an iterator that accesses the given list in reverse order.
+You can convert this iterator into a list using the list() function.
+Example:
+numbers = [1, 2, 3, 4, 5]
+reversed_numbers = list(reversed(numbers))
+print(reversed_numbers)  # Output: [5, 4, 3, 2, 1]
+
+26) How will you remove last object from a list? 
+
+To remove the last object from a list in Python, you can use the pop() method. By default, pop() removes the last item from the list. Here’s an example:
+
+my_list = [1, 2, 3, 4, 5]
+my_list.pop()
+print(my_list)  # Output will be [1, 2, 3, 4]
+If you want to get the last item but keep it in the list, you can use negative indexing:
+
+last_item = my_list[-1]
+print(last_item)  # Output will be 5
+
+But if you only want to remove it, pop() is the way to go.
+
+27)Suppose list1 is [2, 33, 222, 14, and 25], what is list1 [-
+1]?
+
+In Python, using negative indexing allows you to access elements from the end of the list. list1[-1] refers to the last element of the list. For the given list:
+
+list1 = [2, 33, 222, 14, 25]
+list1[-1] would be 25, the last item in the list.
+
+28)Differentiate between append () and extend () methods? 
+
+The append() and extend() methods in Python are used to modify lists, but they serve different purposes:
+
+append():
+
+Purpose: Adds a single element to the end of the list.
+Usage: list.append(element)
+
+Example:
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # Output: [1, 2, 3, 4]
+Behavior: The element added is a single item, so if you use append() with a list, it will add the entire list as a single nested list.
+extend():
+
+Purpose: Adds each element of an iterable (like a list or a set) to the end of the list.
+Usage: list.extend(iterable)
+
+Example:
+my_list = [1, 2, 3]
+my_list.extend([4, 5, 6])
+print(my_list)  # Output: [1, 2, 3, 4, 5, 6]
+
+Behavior: The elements of the iterable are added individually to the list. It is used when you want to concatenate another iterable to the list.
+In summary, use append() to add a single element to a list, and use extend() to add multiple elements from an iterable to a list.
+
+30)How will you compare two lists? 
+
+
+Comparing two lists in Python can be done in several ways depending on what kind of comparison you're looking to perform:
+
+Equality Comparison:
+
+To check if two lists are equal (i.e., they have the same elements in the same order), use the equality operator ==.
+Example:
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+print(list1 == list2)  # Output: True
+Comparison of Elements:
+
+To check if all elements in one list are present in another list (regardless of order), you can use set operations.
+Example:
+
+list1 = [1, 2, 3]
+list2 = [3, 2, 1]
+print(set(list1) == set(list2))  # Output: True
+Order and Element-wise Comparison:
+
+To check if one list is greater than another (lexicographical order), you can use relational operators.
+
+Example:
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 4]
+print(list1 < list2)  # Output: True
+Finding Differences:
+
+To find elements that are in one list but not in the other, you can use set operations or list comprehensions.
+
+Example using set operations:
+
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+difference = set(list1) - set(list2)
+print(difference)  # Output: {1, 2}
+
+
+Example using list comprehension:
+
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+difference = [item for item in list1 if item not in list2]
+print(difference)  # Output: [1, 2]
+
+
+
+
+
+
