@@ -1,0 +1,54 @@
+43)What is tuple? Difference between list and tuple.
+
+Tuple:
+A tuple is a collection of ordered and immutable (unchangeable) elements in Python. Tuples are written with parentheses () and can contain elements of different data types, like integers, strings, or even other tuples. Once a tuple is created, its elements cannot be modified.
+
+Example:
+
+my_tuple = (1, 2, 3, "apple", True)
+
+Differences Between List and Tuple:
+
+Feature         	List	                                    Tuple
+Mutability	 Mutable (can be changed)	              Immutable (cannot be changed)
+Syntax	         Uses square brackets []	              Uses parentheses ()
+Performance	 Slower (because it's mutable)  	      Faster (due to immutability)
+Usage	         Best for collections that may change	      Best for fixed collections
+Functions	 Lists have more built-in functions	      Tuples have fewer built-in functions
+Memory usage	 Takes more memory	                      Takes less memory
+
+
+Example of List:
+my_list = [1, 2, 3, "banana", False]
+my_list[0] = 100  # Modifying the list (possible)
+ 
+
+Example of Tuple:
+my_tuple = (1, 2, 3, "apple", True)
+# my_tuple[0] = 100  # This will raise an error since tuples are immutable
+
+
+Key Points:
+Lists are used when the data needs to change, while tuples are better when you want to ensure that data remains constant.
+Tuples, due to their immutability, can be used as keys in dictionaries, while lists cannot.
+
+
+47)How will you create a dictionary using tuples in python? 
+
+In Python, you can create a dictionary using a list of tuples, where each tuple contains two elements: the first element becomes the key, and the second becomes the value. This is often done using the dict() constructor.
+
+Here's how you can do it:
+
+# List of tuples
+tuples = [("key1", "value1"), ("key2", "value2"), ("key3", "value3")]
+
+# Create dictionary using dict()
+dictionary = dict(tuples)
+
+print(dictionary)
+
+
+Output:
+{'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+
+In this example, each tuple corresponds to a key-value pair in the resulting dictionary.
