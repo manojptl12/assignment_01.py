@@ -1,0 +1,186 @@
+65)How Many Basic Types of Functions Are Available in Python?
+n Python, there are two basic types of functions:
+
+1. Built-in Functions
+
+These are pre-defined functions provided by Python. You don't need to define them; they are available for use immediately.
+
+Examples include:
+print(): Prints output to the console.
+len(): Returns the length of an object.
+type(): Returns the type of an object.
+sum(): Sums up all elements in an iterable.
+
+2. User-defined Functions
+
+These are functions that you create yourself using the def keyword. They are written to perform specific tasks as needed by the user.
+
+Example of a user-defined function:
+def add_numbers(a, b):
+    return a + b
+So, the two basic types of functions in Python are built-in functions and user-defined functions.
+
+66)How can you pick a random item from a list or tuple? 
+
+You can pick a random item from a list or tuple in Python using the random.choice() function from the random module. Here's how:
+
+Example with a List:
+
+import random
+my_list = [1, 2, 3, 4, 5]
+random_item = random.choice(my_list)
+print(f"Random item from the list: {random_item}")
+
+Example with a Tuple:
+
+import random
+my_tuple = (10, 20, 30, 40, 50)
+random_item = random.choice(my_tuple)
+print(f"Random item from the tuple: {random_item}")
+
+Explanation:
+random.choice(sequence) selects a random element from a non-empty sequence like a list or a tuple.
+
+
+67)How can you pick a random item from a range? 
+
+To pick a random item from a range, you can use the random.randrange() function from the random module. Here's how you can do it:
+
+Example using random.randrange():
+
+import random
+# Pick a random item from a range (for example, from 0 to 9)
+random_item = random.randrange(0, 10)
+print(f"Random item from the range: {random_item}")
+
+Explanation:
+random.randrange(start, stop) returns a random number from the specified range, including start but excluding stop.
+For example, random.randrange(0, 10) will pick a random number between 0 and 9.
+
+Alternatively, you can use random.choice() with range() as well:
+
+import random
+random_item = random.choice(range(0, 10))
+print(f"Random item from the range: {random_item}")
+
+Both methods are effective for selecting a random item from a range.
+
+
+68)How can you get a random number in python?
+
+In Python, you can generate random numbers using the random module. Here are some common ways to generate different types of random numbers:
+
+1. Generate a Random Float between 0 and 1
+
+Use random.random() to get a random float number between 0 (inclusive) and 1 (exclusive):
+
+import random
+
+random_float = random.random()
+print(f"Random float between 0 and 1: {random_float}")
+
+2. Generate a Random Integer within a Range
+
+Use random.randint(a, b) to get a random integer between a and b (both inclusive):
+
+random_int = random.randint(1, 10)
+print(f"Random integer between 1 and 10: {random_int}")
+
+3. Generate a Random Number from a Range
+
+Use random.randrange(start, stop, step) to generate a random number from a range with an optional step:
+
+random_num = random.randrange(0, 20, 2)  # Random even number between 0 and 18
+print(f"Random number from range 0 to 20 (even): {random_num}")
+
+4. Generate a Random Float within a Range
+
+Use random.uniform(a, b) to generate a random float number between a and b:
+
+random_float_range = random.uniform(5.5, 10.5)
+print(f"Random float between 5.5 and 10.5: {random_float_range}")
+
+5. Generate a Random Number from a Normal Distribution
+
+Use random.gauss(mu, sigma) to generate a random number from a normal (Gaussian) distribution:
+
+mu = 0    # Mean
+sigma = 1 # Standard deviation
+random_gaussian = random.gauss(mu, sigma)
+print(f"Random number from normal distribution: {random_gaussian}")
+
+Each of these methods is useful for different types of random number generation.
+
+69)How will you set the starting value in generating random numbers? 
+
+To set the starting value (also known as the seed) for generating random numbers in Python, you use the random.seed() function. Setting a seed ensures that the sequence of random numbers generated is reproducible, meaning you get the same sequence each time you run the code with the same seed value.
+
+Example of Setting a Seed:
+
+import random
+
+# Set a seed value
+random.seed(42)
+
+# Generate random numbers
+random_number1 = random.random()
+random_number2 = random.randint(1, 10)
+
+print(f"Random float: {random_number1}")
+print(f"Random integer: {random_number2}")
+
+Explanation:
+a] random.seed(42) sets the seed to 42 (you can use any integer). After setting the seed, the sequence of random numbers will be the same every time you run the code.
+b] Without setting a seed, the random number generator uses the system time or another source of entropy to generate unpredictable results.
+
+You can reset the seed to change the sequence of random numbers, or omit it to allow Python to generate random numbers unpredictably.
+
+70) How will you randomize the items of a list in place?
+
+To randomize (shuffle) the items of a list in place in Python, you can use the random.shuffle() function from the random module. This function modifies the original list directly and rearranges the elements in a random order.
+
+Example:
+import random
+
+# Original list
+my_list = [1, 2, 3, 4, 5]
+
+# Shuffle the list in place
+random.shuffle(my_list)
+
+# Print the shuffled list
+print(f"Shuffled list: {my_list}")
+
+Explanation:
+a] random.shuffle(my_list) randomly shuffles the elements of my_list in place, meaning the original list is modified directly.
+b] This method does not return a new list, it only shuffles the existing one.
+
+Each time you run the code, the list will be shuffled differently unless you set a seed using random.seed() before calling shuffle().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
